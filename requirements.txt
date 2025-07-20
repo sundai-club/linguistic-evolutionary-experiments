@@ -1,4 +1,6 @@
 transformers
+peft
+wandb
 accelerate
 bitsandbytes
 openai
