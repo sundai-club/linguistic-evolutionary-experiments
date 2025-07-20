@@ -19,7 +19,7 @@ def basic_dataset(combos, n):
     
     for _ in range(n):
         # Randomly sample combinations to OR together
-        num_to_combine = random.randint(1, len(combos))
+        num_to_combine = random.randint(1, 4)
         selected_combos = random.sample(combos, num_to_combine)
         
         # OR the selected combinations
@@ -51,7 +51,7 @@ def dataset_2d(combos, n):
     
     for _ in range(n):
         # Randomly sample combinations to OR together
-        num_to_combine = random.randint(1, len(combos))
+        num_to_combine = random.randint(1, 4)
         selected_combos = random.sample(combos, num_to_combine)
         
         # OR the selected combinations into 2D array
@@ -70,7 +70,7 @@ def dataset_2d(combos, n):
 
 if __name__ == "__main__":
     # Test with permutations of length 4
-    combos = make_permutations(4)
+    combos = make_permutations(10)
     print("Original combos:", combos)
     
     # Generate 5 random OR combinations
@@ -78,9 +78,9 @@ if __name__ == "__main__":
     print("Generated dataset:", dataset)
     
     # Generate 2 random 2D OR combinations
-    dataset_2d_result = dataset_2d(combos, 2)
-    print("Generated 2D dataset:")
-    for i, matrix in enumerate(dataset_2d_result):
-        print(f"Matrix {i+1}:")
-        for row in matrix:
-            print(row)
+    # dataset_2d_result = dataset_2d(combos, 2)
+    # print("Generated 2D dataset:")
+    # for i, matrix in enumerate(dataset_2d_result):
+    #     print(f"Matrix {i+1}:")
+    #     for row in matrix:
+    #         print(row)
